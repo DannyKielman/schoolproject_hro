@@ -15,11 +15,19 @@
                 margin: auto;
             }
             
-            .homepage-slide, .auth-slide, .option-slide{
+            .exit {
+                text-align: right;
+            }
+            
+            .homepage-slide, .auth-slide, .option-slide, .saldo-slide, .ophalen-slide, .succes-slide {
                 max-width: 450px;
                 text-align: center;
                 margin: auto auto;
                 display: none;
+            }
+            
+            .option-slide {
+                margin-top: 100px;
             }
             
             .active-slide {
@@ -55,9 +63,25 @@
                     selectSlide.fadeIn(600).addClass('active-slide').show();
                 });
     
-                $('.teamwork').click(function() {
+                $('.saldo').click(function() {
                     var currentSlide = $('.active-slide');
-                    var selectSlide = $('.teamwork-slide');
+                    var selectSlide = $('.saldo-slide');
+        
+                    currentSlide.fadeOut(600).removeClass('active-slide');
+                    selectSlide.fadeIn(600).addClass('active-slide').show();
+                });
+                
+                $('.ophalen').click(function() {
+                    var currentSlide = $('.active-slide');
+                    var selectSlide = $('.ophalen-slide');
+        
+                    currentSlide.fadeOut(600).removeClass('active-slide');
+                    selectSlide.fadeIn(600).addClass('active-slide').show();
+                });
+                
+                $('.succes').click(function() {
+                    var currentSlide = $('.active-slide');
+                    var selectSlide = $('.succes-slide');
         
                     currentSlide.fadeOut(600).removeClass('active-slide');
                     selectSlide.fadeIn(600).addClass('active-slide').show();
@@ -84,8 +108,28 @@
         </div>
         
         <div class="option-slide">
-            <h1>Saldo</h1>
-            <h1>Ophalen</h1>
+            <h1>Saldo   <input type="submit" class="saldo"></h1>
+            <h1>Ophalen <input type="submit" class="ophalen"></h1>
+        </div>
+        
+        <div class="saldo-slide">
+            <h1>Je saldo:</h1>
+            <p>$500.00</p>
+            <input type="submit" class="homepage">
+        </div>
+        
+        <div class="ophalen-slide">
+            <h1>Insert amount</h1>
+            <input type="text" name="pin">
+            <input type="submit" class="succes">
+        </div>
+        
+        <div class="succes-slide">
+            <h1>Thank you and have a nice day</h1>
+        </div>
+        
+        <div class="exit">
+            <input type="submit" class="homepage">
         </div>
     </body>
 
