@@ -1,5 +1,6 @@
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <style>
             #h {
 /*                margin-top: auto;*/
@@ -13,13 +14,79 @@
                 text-align: center;
                 margin: auto;
             }
+            
+            .homepage-slide, .auth-slide, .option-slide{
+                max-width: 450px;
+                text-align: center;
+                margin: auto auto;
+                display: none;
+            }
+            
+            .active-slide {
+                display: block;
+            }
+            
         </style>
+        
+        <script>
+            main = function() {              
+                /* pages */
+                $('.homepage').click(function() {
+                    var currentSlide = $('.active-slide');
+                    var selectSlide = $('.homepage-slide');
+        
+                    currentSlide.fadeOut(600).removeClass('active-slide');
+                    selectSlide.fadeIn(600).addClass('active-slide').show();
+                });
+                
+                $('.auth').click(function() {
+                    var currentSlide = $('.active-slide');
+                    var selectSlide = $('.auth-slide');
+        
+                    currentSlide.fadeOut(600).removeClass('active-slide');
+                    selectSlide.fadeIn(600).addClass('active-slide').show();
+                });
+    
+                $('.option').click(function() {
+                    var currentSlide = $('.active-slide');
+                    var selectSlide = $('.option-slide');
+        
+                    currentSlide.fadeOut(600).removeClass('active-slide');
+                    selectSlide.fadeIn(600).addClass('active-slide').show();
+                });
+    
+                $('.teamwork').click(function() {
+                    var currentSlide = $('.active-slide');
+                    var selectSlide = $('.teamwork-slide');
+        
+                    currentSlide.fadeOut(600).removeClass('active-slide');
+                    selectSlide.fadeIn(600).addClass('active-slide').show();
+                });
+                
+            }
+
+            $(document).ready(main);
+            
+            
+        </script>
     
     </head>
     <body>
-        <h1 id="h">Please insert card in Machine</h1>
-        <div id="pic"><img src="http://help.getdoxie.com/content/doxiego/05-advanced/05-ipad/1.gif"></div>
-    
+        <div class="homepage-slide active-slide">
+            <h1 id="h">Please insert card in Machine</h1>
+            <div id="pic" class="auth"><img src="http://help.getdoxie.com/content/doxiego/05-advanced/05-ipad/1.gif"></div>
+        </div>
+        
+        <div class="auth-slide">
+            <h1>Enter pin</h1>
+            <input type="text" name="pin">
+            <input type="submit" class="option">
+        </div>
+        
+        <div class="option-slide">
+            <h1>Saldo</h1>
+            <h1>Ophalen</h1>
+        </div>
     </body>
 
 </html>
