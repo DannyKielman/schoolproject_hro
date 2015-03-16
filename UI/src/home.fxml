@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?scenebuilder-stylesheet main.css?>
 
-<StackPane fx:id="home" xmlns:fx="http://javafx.com/fxml" fx:controller="HomeController">
+<StackPane fx:id="home" prefHeight="450.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
   <children>
-    <Button mnemonicParsing="false" onAction="#nextPane" text="Next Pane" />
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="135.61943817138672" minHeight="10.0" prefHeight="131.91844940185547" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="350.94561767578125" minHeight="10.0" prefHeight="279.08155059814453" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="159.45028686523438" minHeight="0.0" prefHeight="40.13592529296875" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+          <Button alignment="CENTER" mnemonicParsing="false" onAction="#nextPane" text="Next Pane" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fitHeight="292.0" fitWidth="355.0" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../../nfc-reader.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="65.0" />
+               </GridPane.margin>
+            </ImageView>
+            <Label text="Please put card on reader" wrapText="true" GridPane.columnIndex="1">
+               <font>
+                  <Font size="48.0" />
+               </font></Label>
+         </children>
+      </GridPane>
   </children>
 </StackPane>

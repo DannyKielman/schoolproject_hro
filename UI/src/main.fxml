@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?scenebuilder-stylesheet main.css?>
 
-<VBox prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
-  <children>
-    <Label fx:id="headerLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Header" textAlignment="CENTER" />
-    <StackPane fx:id="vistaHolder" />
-      <Label alignment="CENTER" text="Footer" textAlignment="CENTER" />
-  </children>
-</VBox>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="594.1234741210938" minHeight="10.0" prefHeight="109.38197326660156" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="531.9019927978516" minHeight="10.0" prefHeight="513.1851806640625" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="83.8148193359375" minHeight="10.0" prefHeight="83.8148193359375" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+    <Label fx:id="headerLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="123.0" prefWidth="900.0" text="Welcome to LoempiaBank" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+    <StackPane fx:id="vistaHolder" GridPane.rowIndex="1" />
+      <HBox fx:id="headerLabel" prefHeight="61.0" prefWidth="900.0" GridPane.rowIndex="2">
+         <children>
+          <Label alignment="CENTER" prefHeight="100.0" text="visti us at loempiabank.ga" textAlignment="CENTER">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="200.0" prefWidth="450.0" />
+            <Label alignment="CENTER" layoutX="49.0" layoutY="10.0" prefHeight="100.0" text="contact us: info@loempiabank.ga" textAlignment="CENTER">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

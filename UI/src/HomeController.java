@@ -13,7 +13,7 @@ public class HomeController {
      */
     @FXML
     void nextPane(ActionEvent event) {
-        // PageNavigator.loadVista(PageNavigator.VISTA_2);
+        PageNavigator.loadVista(PageNavigator.VISTA_2);
     }
 
 }
