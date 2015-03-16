@@ -21,4 +21,9 @@ public class OptionController {
         PageNavigator.loadVista(PageNavigator.VISTA_SALD);
     }
 
+    @FXML
+    void homePane(ActionEvent event) {
+        PageNavigator.loadVista(PageNavigator.VISTA_1);
+    }
+
 }
