@@ -17,6 +17,8 @@ public class PageNavigator {
     public static final String VISTA_1 = "home.fxml";
     public static final String VISTA_2 = "login.fxml";
     public static final String VISTA_3 = "option.fxml";
+    public static final String VISTA_TRANS = "transaction.fxml";
+    public static final String VISTA_SALD = "saldo.fxml";
 
     /** The main application layout controller. */
     private static MainController mainController;
